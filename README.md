@@ -16,7 +16,7 @@ pod 'CJSidePopGesture', '~> 1.0.0'
 
 # Usage
 
-![snapshot](https://github.com/CJMaxWell2013/CJSidePopGesture/Snapshots/snapshot0.gif)
+![snapshot](https://github.com/CJMaxWell2013/CJSidePopGesture/master/Snapshots/snapshot0.gif)
 
 **AOP**, just add 2 files and **no need** for any setups, all navigation controllers will be able to use fullscreen pop gesture automatically.  
 
