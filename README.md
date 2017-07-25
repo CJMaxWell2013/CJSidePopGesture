@@ -1,9 +1,16 @@
 # CJSidePopGesture
 iOS侧滑返回修改
 
-# Overview
+# Installation
 
-![snapshot](https://raw.githubusercontent.com/forkingdog/FDFullscreenPopGesture/master/Snapshots/snapshot0.gif)
+Use CocoaPods  
+
+``` ruby
+pod 'CJSidePopGesture', '~> 1.0.0'
+```
+
+
+# Overview
 
 这个扩展来自 @forkingdog 团队这些人的源码，以及@J_雨等人，参考文章地址：(http://www.jianshu.com/p/f83acf1d337b)
 
@@ -33,8 +40,6 @@ It handles navigation bar transition properly when using fullscreen gesture to p
 - without bar -> with bar
 - without bar -> without bar
 
-![snapshot with bar states](https://raw.githubusercontent.com/forkingdog/FDFullscreenPopGesture/master/Snapshots/snapshot1.gif)
-
 This opmiziation is enabled by default, from now on you don't need to call **UINavigationController**'s `-setNavigationBarHidden:animated:` method, instead, use view controller's specific API to hide its bar:  
 
 ``` objc
@@ -61,13 +66,6 @@ return NO;
 }
 ```
 
-# Installation
-
-Use CocoaPods  
-
-``` ruby
-pod 'FDFullscreenPopGesture', '1.1'
-```
 # Release Notes
 
 **1.0.0** - 侧滑返回首次上传修改，这个版本支持到iOS7.0以及以上.
