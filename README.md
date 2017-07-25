@@ -12,11 +12,14 @@ pod 'CJSidePopGesture', '~> 1.0.0'
 
 # Overview
 
+![snapshot](https://raw.githubusercontent.com/CJMaxWell2013/CJSidePopGesture/master/Snapshots/sideBack.gif)
+
+
 这个扩展来自 @forkingdog 团队这些人的源码，以及@J_雨等人，参考文章地址：(http://www.jianshu.com/p/f83acf1d337b)
 
 # Usage
 
-![snapshot](https://github.com/CJMaxWell2013/CJSidePopGesture/Snapshots/sideBack.gif)
+
 
 **AOP**, just add 2 files and **no need** for any setups, all navigation controllers will be able to use fullscreen pop gesture automatically.  
 
