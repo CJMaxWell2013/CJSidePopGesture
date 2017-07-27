@@ -84,14 +84,20 @@ typedef void (^_FDViewControllerWillAppearInjectBlock)(UIViewController *viewCon
     NSInteger stackCount = self.navigationController.viewControllers.count;
     if (stackCount < 2) return;
     UIViewController *previousController = self.navigationController.viewControllers[stackCount - 2];
-    if (!previousController || !previousController.fd_prefersNavigationBarHidden) return;
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        if(previousController.fd_prefersNavigationBarHidden == self.navigationController.navigationBar.isHidden && self.fd_prefersNavigationBarHidden){
+    if (self.fd_prefersNavigationBarHidden && previousController && !previousController.fd_prefersNavigationBarHidden) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [self.navigationController setNavigationBarHidden:YES animated:NO];
-        }else {
-            [self.navigationController setNavigationBarHidden:NO animated:NO];
-        }
-    });
+        });
+    } else {
+        if (!previousController || !previousController.fd_prefersNavigationBarHidden) return;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            if(previousController.fd_prefersNavigationBarHidden == self.navigationController.navigationBar.isHidden && self.fd_prefersNavigationBarHidden){
+                [self.navigationController setNavigationBarHidden:YES animated:NO];
+            }else {
+                [self.navigationController setNavigationBarHidden:NO animated:NO];
+            }
+        });
+    }
 }
 
 - (void)cj_viewDidDisappear:(BOOL)animated {
