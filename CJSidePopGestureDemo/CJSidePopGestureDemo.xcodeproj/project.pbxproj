@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		634A78BC1F297A3E007310D4 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 634A78BB1F297A3E007310D4 /* UINavigationController+FDFullscreenPopGesture.m */; };
 		638007431F25F315004A8A12 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 638007421F25F315004A8A12 /* main.m */; };
 		638007461F25F315004A8A12 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 638007451F25F315004A8A12 /* AppDelegate.m */; };
 		638007491F25F315004A8A12 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638007481F25F315004A8A12 /* ViewController.m */; };
@@ -15,7 +16,6 @@
 		638007511F25F315004A8A12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6380074F1F25F315004A8A12 /* LaunchScreen.storyboard */; };
 		6380075C1F25F315004A8A12 /* CJSidePopGestureDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6380075B1F25F315004A8A12 /* CJSidePopGestureDemoTests.m */; };
 		638007671F25F315004A8A12 /* CJSidePopGestureDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 638007661F25F315004A8A12 /* CJSidePopGestureDemoUITests.m */; };
-		638007771F25F338004A8A12 /* UINavigationController+CJSidePopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 638007761F25F338004A8A12 /* UINavigationController+CJSidePopGesture.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		634A78BA1F297A3E007310D4 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		634A78BB1F297A3E007310D4 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		6380073E1F25F315004A8A12 /* CJSidePopGestureDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CJSidePopGestureDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		638007421F25F315004A8A12 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		638007441F25F315004A8A12 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -52,8 +54,6 @@
 		638007621F25F315004A8A12 /* CJSidePopGestureDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CJSidePopGestureDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		638007661F25F315004A8A12 /* CJSidePopGestureDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CJSidePopGestureDemoUITests.m; sourceTree = "<group>"; };
 		638007681F25F315004A8A12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		638007751F25F338004A8A12 /* UINavigationController+CJSidePopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+CJSidePopGesture.h"; sourceTree = "<group>"; };
-		638007761F25F338004A8A12 /* UINavigationController+CJSidePopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+CJSidePopGesture.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,8 +147,8 @@
 		638007741F25F338004A8A12 /* CJSidePopGesture */ = {
 			isa = PBXGroup;
 			children = (
-				638007751F25F338004A8A12 /* UINavigationController+CJSidePopGesture.h */,
-				638007761F25F338004A8A12 /* UINavigationController+CJSidePopGesture.m */,
+				634A78BA1F297A3E007310D4 /* UINavigationController+FDFullscreenPopGesture.h */,
+				634A78BB1F297A3E007310D4 /* UINavigationController+FDFullscreenPopGesture.m */,
 			);
 			name = CJSidePopGesture;
 			path = ../../CJSidePopGesture;
@@ -291,8 +291,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				638007491F25F315004A8A12 /* ViewController.m in Sources */,
-				638007771F25F338004A8A12 /* UINavigationController+CJSidePopGesture.m in Sources */,
 				638007461F25F315004A8A12 /* AppDelegate.m in Sources */,
+				634A78BC1F297A3E007310D4 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				638007431F25F315004A8A12 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -531,6 +531,7 @@
 				6380076D1F25F315004A8A12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6380076E1F25F315004A8A12 /* Build configuration list for PBXNativeTarget "CJSidePopGestureDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -539,6 +540,7 @@
 				638007701F25F315004A8A12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		638007711F25F315004A8A12 /* Build configuration list for PBXNativeTarget "CJSidePopGestureDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -547,6 +549,7 @@
 				638007731F25F315004A8A12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

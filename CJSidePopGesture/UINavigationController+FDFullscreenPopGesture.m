@@ -1,21 +1,35 @@
+// The MIT License (MIT)
 //
-//  UINavigationController+CJSidePopGesture.m
-//  侧滑返回修改
+// Copyright (c) 2015-2016 forkingdog ( https://github.com/forkingdog )
 //
-//  Created by 北极星电力 on 2017/7/24.
-//  Copyright © 2017年 北极星电力. All rights reserved.
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
 //
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
 
-#import "UINavigationController+CJSidePopGesture.h"
+#import "UINavigationController+FDFullscreenPopGesture.h"
 #import <objc/runtime.h>
 
-@interface _CJSidePopGestureRecognizerDelegate : NSObject <UIGestureRecognizerDelegate>
+@interface _FDFullscreenPopGestureRecognizerDelegate : NSObject <UIGestureRecognizerDelegate>
 
 @property (nonatomic, weak) UINavigationController *navigationController;
 
 @end
 
-@implementation _CJSidePopGestureRecognizerDelegate
+@implementation _FDFullscreenPopGestureRecognizerDelegate
 
 - (BOOL)gestureRecognizerShouldBegin:(UIPanGestureRecognizer *)gestureRecognizer
 {
@@ -46,17 +60,15 @@
 
 @end
 
-
-
 typedef void (^_FDViewControllerWillAppearInjectBlock)(UIViewController *viewController, BOOL animated);
 
-@interface UIViewController (CJSidePopGesturePrivate)
+@interface UIViewController (FDFullscreenPopGesturePrivate)
 
 @property (nonatomic, copy) _FDViewControllerWillAppearInjectBlock fd_willAppearInjectBlock;
 
 @end
 
-@implementation UIViewController (CJSidePopGesturePrivate)
+@implementation UIViewController (FDFullscreenPopGesturePrivate)
 
 + (void)load {
     static dispatch_once_t onceToken;
@@ -77,13 +89,17 @@ typedef void (^_FDViewControllerWillAppearInjectBlock)(UIViewController *viewCon
 
 - (void)cj_viewDidAppear:(BOOL)animated {
     [self cj_viewDidAppear:animated];
-    if (self.cj_hasUpstairsController) {
-        self.cj_hasUpstairsController = NO;
+    if (self.cj_isPushNextController) {
+        self.cj_isPushNextController = NO;
         return;
     }
     NSInteger stackCount = self.navigationController.viewControllers.count;
     if (stackCount < 2) return;
+
+    
     UIViewController *previousController = self.navigationController.viewControllers[stackCount - 2];
+    
+    
     if (self.fd_prefersNavigationBarHidden && previousController && !previousController.fd_prefersNavigationBarHidden) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [self.navigationController setNavigationBarHidden:YES animated:NO];
@@ -102,7 +118,7 @@ typedef void (^_FDViewControllerWillAppearInjectBlock)(UIViewController *viewCon
 
 - (void)cj_viewDidDisappear:(BOOL)animated {
     [self cj_viewDidDisappear:animated];
-    self.cj_hasUpstairsController = YES;
+    self.cj_isPushNextController = YES;
 }
 
 - (void)fd_viewWillAppear:(BOOL)animated
@@ -125,15 +141,13 @@ typedef void (^_FDViewControllerWillAppearInjectBlock)(UIViewController *viewCon
     objc_setAssociatedObject(self, @selector(fd_willAppearInjectBlock), block, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
-
 @end
 
-
-@implementation UINavigationController (CJSidePopGesture)
+@implementation UINavigationController (FDFullscreenPopGesture)
 
 + (void)load
 {
-    
+
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         // Inject "-pushViewController:animated:"
@@ -192,12 +206,12 @@ typedef void (^_FDViewControllerWillAppearInjectBlock)(UIViewController *viewCon
     }
 }
 
-- (_CJSidePopGestureRecognizerDelegate *)fd_popGestureRecognizerDelegate
+- (_FDFullscreenPopGestureRecognizerDelegate *)fd_popGestureRecognizerDelegate
 {
-    _CJSidePopGestureRecognizerDelegate *delegate = objc_getAssociatedObject(self, _cmd);
+    _FDFullscreenPopGestureRecognizerDelegate *delegate = objc_getAssociatedObject(self, _cmd);
     
     if (!delegate) {
-        delegate = [[_CJSidePopGestureRecognizerDelegate alloc] init];
+        delegate = [[_FDFullscreenPopGestureRecognizerDelegate alloc] init];
         delegate.navigationController = self;
         
         objc_setAssociatedObject(self, _cmd, delegate, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
@@ -234,11 +248,9 @@ typedef void (^_FDViewControllerWillAppearInjectBlock)(UIViewController *viewCon
     objc_setAssociatedObject(self, key, @(enabled), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-
 @end
 
-
-@implementation UIViewController (CJSidePopGesture)
+@implementation UIViewController (FDFullscreenPopGesture)
 
 - (BOOL)fd_interactivePopDisabled
 {
@@ -260,14 +272,14 @@ typedef void (^_FDViewControllerWillAppearInjectBlock)(UIViewController *viewCon
     objc_setAssociatedObject(self, @selector(fd_prefersNavigationBarHidden), @(hidden), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (BOOL)cj_hasUpstairsController
+- (BOOL)cj_isPushNextController
 {
     return [objc_getAssociatedObject(self, _cmd) boolValue];
 }
 
-- (void)setCj_hasUpstairsController:(BOOL)next
+- (void)setCj_isPushNextController:(BOOL)next
 {
-    objc_setAssociatedObject(self, @selector(cj_hasUpstairsController), @(next), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(cj_isPushNextController), @(next), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end
