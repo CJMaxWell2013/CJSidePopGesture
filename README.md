@@ -6,7 +6,9 @@ iOS侧滑返回修改
 Use CocoaPods  
 
 ``` ruby
-pod 'CJSidePopGesture', '~> 1.0.0'
+pod 'CJSidePopGesture', '~> 1.0.1'
+or
+pod 'CJSidePopGesture'
 ```
 
 
