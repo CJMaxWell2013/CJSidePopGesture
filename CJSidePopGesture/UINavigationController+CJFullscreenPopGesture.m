@@ -209,7 +209,7 @@ typedef void (^_CJViewControllerWillAppearInjectBlock)(UIViewController *viewCon
 - (void)dragging:(UIPanGestureRecognizer *)recognizer{
     if (self.viewControllers.count <= 1) return;
     CGFloat tx = [recognizer translationInView:self.view].x;
-    CGFloat width_scale;
+    CGFloat width_scale = 0.f;
     if (recognizer.state == UIGestureRecognizerStateBegan) {
         width_scale = 0;
         self.screenShotView.hidden = NO;
