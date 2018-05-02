@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/home/Library/Developer/Shared/Documentation/DocSets/Chengjie.CJSidePopGestureDemo.docset
+Time: 2018-05-02 05:11:22 +0000

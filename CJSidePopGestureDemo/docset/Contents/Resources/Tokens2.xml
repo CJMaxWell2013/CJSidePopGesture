@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/UIViewController+CJFullscreenPopGesture.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/UIViewController(CJFullscreenPopGesture)</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>UINavigationController+CJFullscreenPopGesture.h</DeclaredIn>
+            
+			
+			<NodeRef refid="2"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UIViewController/setCj_prefersNavigationBarHidden:</TokenIdentifier>
+			<Abstract type="html">隐藏NavigationBar（default is NO）</Abstract>
+			<DeclaredIn>UINavigationController+CJFullscreenPopGesture.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL cj_prefersNavigationBarHidden</Declaration>
+			
+			
+			<Anchor>//api/name/cj_prefersNavigationBarHidden</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UIViewController/cj_prefersNavigationBarHidden</TokenIdentifier>
+			<Abstract type="html">隐藏NavigationBar（default is NO）</Abstract>
+			<DeclaredIn>UINavigationController+CJFullscreenPopGesture.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL cj_prefersNavigationBarHidden</Declaration>
+			
+			
+			<Anchor>//api/name/cj_prefersNavigationBarHidden</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/UIViewController/cj_prefersNavigationBarHidden</TokenIdentifier>
+			<Abstract type="html">隐藏NavigationBar（default is NO）</Abstract>
+			<DeclaredIn>UINavigationController+CJFullscreenPopGesture.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL cj_prefersNavigationBarHidden</Declaration>
+			
+			
+			<Anchor>//api/name/cj_prefersNavigationBarHidden</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UIViewController/setCj_interactivePopDisabled:</TokenIdentifier>
+			<Abstract type="html">关闭某个控制器的pop手势（default is NO）</Abstract>
+			<DeclaredIn>UINavigationController+CJFullscreenPopGesture.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL cj_interactivePopDisabled</Declaration>
+			
+			
+			<Anchor>//api/name/cj_interactivePopDisabled</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UIViewController/cj_interactivePopDisabled</TokenIdentifier>
+			<Abstract type="html">关闭某个控制器的pop手势（default is NO）</Abstract>
+			<DeclaredIn>UINavigationController+CJFullscreenPopGesture.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL cj_interactivePopDisabled</Declaration>
+			
+			
+			<Anchor>//api/name/cj_interactivePopDisabled</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/UIViewController/cj_interactivePopDisabled</TokenIdentifier>
+			<Abstract type="html">关闭某个控制器的pop手势（default is NO）</Abstract>
+			<DeclaredIn>UINavigationController+CJFullscreenPopGesture.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL cj_interactivePopDisabled</Declaration>
+			
+			
+			<Anchor>//api/name/cj_interactivePopDisabled</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UIViewController/setCj_recognizeSimultaneouslyEnable:</TokenIdentifier>
+			<Abstract type="html">自定义的滑动返回手势是否与其他手势共存，一般使用默认值(default return NO：不与任何手势共存)</Abstract>
+			<DeclaredIn>UINavigationController+CJFullscreenPopGesture.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL cj_recognizeSimultaneouslyEnable</Declaration>
+			
+			
+			<Anchor>//api/name/cj_recognizeSimultaneouslyEnable</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UIViewController/cj_recognizeSimultaneouslyEnable</TokenIdentifier>
+			<Abstract type="html">自定义的滑动返回手势是否与其他手势共存，一般使用默认值(default return NO：不与任何手势共存)</Abstract>
+			<DeclaredIn>UINavigationController+CJFullscreenPopGesture.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL cj_recognizeSimultaneouslyEnable</Declaration>
+			
+			
+			<Anchor>//api/name/cj_recognizeSimultaneouslyEnable</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/UIViewController/cj_recognizeSimultaneouslyEnable</TokenIdentifier>
+			<Abstract type="html">自定义的滑动返回手势是否与其他手势共存，一般使用默认值(default return NO：不与任何手势共存)</Abstract>
+			<DeclaredIn>UINavigationController+CJFullscreenPopGesture.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL cj_recognizeSimultaneouslyEnable</Declaration>
+			
+			
+			<Anchor>//api/name/cj_recognizeSimultaneouslyEnable</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

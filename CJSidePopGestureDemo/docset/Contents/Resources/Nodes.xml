@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocSetNodes version="1.0">
+    <TOC>
+        <Node type="folder">
+            <Name>CJSidePopGestureDemo</Name>
+            <Path>index.html</Path>
+			<Subnodes>
+                
+				
+				
+				<Node>
+					<Name>Categories</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="1"/>
+						<NodeRef refid="2"/>
+						
+					</Subnodes>
+				</Node>
+				
+                
+                
+				<Node>
+					<Name>Constants</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="3"/>
+						
+					</Subnodes>
+				</Node>
+				
+                
+                <Node>
+                    <Name>Blocks</Name>
+                    <Path>index.html</Path>
+                    <Subnodes>
+                        <NodeRef refid="4"/>
+                        
+                    </Subnodes>
+                </Node>
+                
+			</Subnodes>
+        </Node>
+    </TOC>
+	<Library>
+		
+		
+		<Node id="1" type="file" documentType="reference">
+            <Name>UINavigationController(CJFullscreenPopGesture)</Name>
+            <Path>Categories/UINavigationController+CJFullscreenPopGesture.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Categories/UINavigationController+CJFullscreenPopGesture.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Categories/UINavigationController+CJFullscreenPopGesture.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Categories/UINavigationController+CJFullscreenPopGesture.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="2" type="file" documentType="reference">
+            <Name>UIViewController(CJFullscreenPopGesture)</Name>
+            <Path>Categories/UIViewController+CJFullscreenPopGesture.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Categories/UIViewController+CJFullscreenPopGesture.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Categories/UIViewController+CJFullscreenPopGesture.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                <Node type="section">
+                    <Path>Categories/UIViewController+CJFullscreenPopGesture.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
+                
+                
+            </Subnodes>
+            
+        </Node>
+		
+        
+        <Node id="3" type="file" documentType="reference">
+            <Name>CJFullscreenPopGestureStyle</Name>
+            <Path>Constants/CJFullscreenPopGestureStyle.html</Path>
+            
+        </Node>
+		
+        <Node id="4" type="file" documentType="reference">
+            <Name>_CJViewControllerWillAppearInjectBlock</Name>
+            <Path>Blocks/_CJViewControllerWillAppearInjectBlock.html</Path>
+            
+        </Node>
+        
+	</Library>
+</DocSetNodes>

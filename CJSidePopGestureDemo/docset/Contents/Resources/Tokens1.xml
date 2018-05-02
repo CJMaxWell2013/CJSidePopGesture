@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/UINavigationController+CJFullscreenPopGesture.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/UINavigationController(CJFullscreenPopGesture)</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>UINavigationController+CJFullscreenPopGesture.h</DeclaredIn>
+            
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UINavigationController/setPopGestureStyle:</TokenIdentifier>
+			<Abstract type="html">default is CJFullscreenPopGestureGradientStyle</Abstract>
+			<DeclaredIn>UINavigationController+CJFullscreenPopGesture.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CJFullscreenPopGestureStyle popGestureStyle</Declaration>
+			
+			
+			<Anchor>//api/name/popGestureStyle</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UINavigationController/popGestureStyle</TokenIdentifier>
+			<Abstract type="html">default is CJFullscreenPopGestureGradientStyle</Abstract>
+			<DeclaredIn>UINavigationController+CJFullscreenPopGesture.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CJFullscreenPopGestureStyle popGestureStyle</Declaration>
+			
+			
+			<Anchor>//api/name/popGestureStyle</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/UINavigationController/popGestureStyle</TokenIdentifier>
+			<Abstract type="html">default is CJFullscreenPopGestureGradientStyle</Abstract>
+			<DeclaredIn>UINavigationController+CJFullscreenPopGesture.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CJFullscreenPopGestureStyle popGestureStyle</Declaration>
+			
+			
+			<Anchor>//api/name/popGestureStyle</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UINavigationController/setCj_interactivePopMaxPanDistanceToLeftEdge:</TokenIdentifier>
+			<Abstract type="html">滑动偏移量临界值 &lt;150 会取消返回 &gt;=150 会pop</Abstract>
+			<DeclaredIn>UINavigationController+CJFullscreenPopGesture.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat cj_interactivePopMaxPanDistanceToLeftEdge</Declaration>
+			
+			
+			<Anchor>//api/name/cj_interactivePopMaxPanDistanceToLeftEdge</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UINavigationController/cj_interactivePopMaxPanDistanceToLeftEdge</TokenIdentifier>
+			<Abstract type="html">滑动偏移量临界值 &lt;150 会取消返回 &gt;=150 会pop</Abstract>
+			<DeclaredIn>UINavigationController+CJFullscreenPopGesture.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat cj_interactivePopMaxPanDistanceToLeftEdge</Declaration>
+			
+			
+			<Anchor>//api/name/cj_interactivePopMaxPanDistanceToLeftEdge</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/UINavigationController/cj_interactivePopMaxPanDistanceToLeftEdge</TokenIdentifier>
+			<Abstract type="html">滑动偏移量临界值 &lt;150 会取消返回 &gt;=150 会pop</Abstract>
+			<DeclaredIn>UINavigationController+CJFullscreenPopGesture.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat cj_interactivePopMaxPanDistanceToLeftEdge</Declaration>
+			
+			
+			<Anchor>//api/name/cj_interactivePopMaxPanDistanceToLeftEdge</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UINavigationController/setCj_shouldReceiveTouchDistanceToLeftEdge:</TokenIdentifier>
+			<Abstract type="html">侧滑返回手势手势触发距离，默认全屏</Abstract>
+			<DeclaredIn>UINavigationController+CJFullscreenPopGesture.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat cj_shouldReceiveTouchDistanceToLeftEdge</Declaration>
+			
+			
+			<Anchor>//api/name/cj_shouldReceiveTouchDistanceToLeftEdge</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UINavigationController/cj_shouldReceiveTouchDistanceToLeftEdge</TokenIdentifier>
+			<Abstract type="html">侧滑返回手势手势触发距离，默认全屏</Abstract>
+			<DeclaredIn>UINavigationController+CJFullscreenPopGesture.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat cj_shouldReceiveTouchDistanceToLeftEdge</Declaration>
+			
+			
+			<Anchor>//api/name/cj_shouldReceiveTouchDistanceToLeftEdge</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/UINavigationController/cj_shouldReceiveTouchDistanceToLeftEdge</TokenIdentifier>
+			<Abstract type="html">侧滑返回手势手势触发距离，默认全屏</Abstract>
+			<DeclaredIn>UINavigationController+CJFullscreenPopGesture.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat cj_shouldReceiveTouchDistanceToLeftEdge</Declaration>
+			
+			
+			<Anchor>//api/name/cj_shouldReceiveTouchDistanceToLeftEdge</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>
