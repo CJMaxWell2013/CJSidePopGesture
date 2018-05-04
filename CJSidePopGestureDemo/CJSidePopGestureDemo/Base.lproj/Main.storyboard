@@ -29,7 +29,7 @@
         <!--View Controller-->
         <scene sceneID="f11-hY-rT1">
             <objects>
-                <viewController id="eGn-z3-Gsh" sceneMemberID="viewController">
+                <viewController id="eGn-z3-Gsh" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GI5-TX-gsW"/>
                         <viewControllerLayoutGuide type="bottom" id="6cH-iY-WNY"/>

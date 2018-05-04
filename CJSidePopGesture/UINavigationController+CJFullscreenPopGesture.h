@@ -25,12 +25,21 @@ typedef NS_ENUM(NSInteger,CJFullscreenPopGestureStyle) {
 };
 
 @interface UINavigationController (CJFullscreenPopGesture) <UIGestureRecognizerDelegate>
+
+/// A view controller is able to control navigation bar's appearance by itself,
+/// rather than a global way, checking "fd_prefersNavigationBarHidden" property.
+/// Default to YES, disable it if you don't want so.
+@property (nonatomic, assign) BOOL cj_viewControllerBasedNavigationBarAppearanceEnabled;
+
 /** default is CJFullscreenPopGestureGradientStyle */
 @property (nonatomic, assign) CJFullscreenPopGestureStyle popGestureStyle;
+
 /** 滑动偏移量临界值 `<150` 会取消返回 `>=150` 会pop*/
 @property (nonatomic, assign) CGFloat cj_interactivePopMaxPanDistanceToLeftEdge;
+
 /** 侧滑返回手势手势触发距离，默认全屏 */
 @property (nonatomic, assign) CGFloat cj_shouldReceiveTouchDistanceToLeftEdge;
+
 
 @end
 

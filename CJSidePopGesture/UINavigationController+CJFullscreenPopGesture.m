@@ -308,14 +308,21 @@ typedef void (^_CJViewControllerWillAppearInjectBlock)(UIViewController *viewCon
     return shotView;
 }
 
-- (void)setCj_viewControllerBasedNavigationBarAppearanceEnabled:(BOOL)cj_viewControllerBasedNavigationBarAppearanceEnabled {
-    objc_setAssociatedObject(self, @selector(cj_viewControllerBasedNavigationBarAppearanceEnabled), @(cj_viewControllerBasedNavigationBarAppearanceEnabled), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    
+- (BOOL)cj_viewControllerBasedNavigationBarAppearanceEnabled {
+    NSNumber *number = objc_getAssociatedObject(self, _cmd);
+    if (number) {
+        return number.boolValue;
+    }
+    self.cj_viewControllerBasedNavigationBarAppearanceEnabled = YES;
+    return YES;
 }
 
-- (BOOL)cj_viewControllerBasedNavigationBarAppearanceEnabled {
-    return [objc_getAssociatedObject(self, _cmd) boolValue];
+
+- (void)setCj_viewControllerBasedNavigationBarAppearanceEnabled:(BOOL)enabled {
+    SEL key = @selector(cj_viewControllerBasedNavigationBarAppearanceEnabled);
+    objc_setAssociatedObject(self, key, @(enabled), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
+
 
 - (void)setShowViewOffset:(CGFloat)showViewOffset {
     objc_setAssociatedObject(self, @selector(showViewOffset), @(showViewOffset), OBJC_ASSOCIATION_RETAIN_NONATOMIC);

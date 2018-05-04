@@ -29,6 +29,7 @@
 		638007511F25F315004A8A12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6380074F1F25F315004A8A12 /* LaunchScreen.storyboard */; };
 		6380075C1F25F315004A8A12 /* CJSidePopGestureDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6380075B1F25F315004A8A12 /* CJSidePopGestureDemoTests.m */; };
 		638007671F25F315004A8A12 /* CJSidePopGestureDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 638007661F25F315004A8A12 /* CJSidePopGestureDemoUITests.m */; };
+		F48D4211209C029E00C064BC /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F48D4210209C029E00C064BC /* TestViewController.m */; };
 		F4BCE9462099809800C246DD /* UINavigationController+CJFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BCE9452099809800C246DD /* UINavigationController+CJFullscreenPopGesture.m */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,8 @@
 		638007621F25F315004A8A12 /* CJSidePopGestureDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CJSidePopGestureDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		638007661F25F315004A8A12 /* CJSidePopGestureDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CJSidePopGestureDemoUITests.m; sourceTree = "<group>"; };
 		638007681F25F315004A8A12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F48D420F209C029E00C064BC /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		F48D4210209C029E00C064BC /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		F4BCE9442099809800C246DD /* UINavigationController+CJFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+CJFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		F4BCE9452099809800C246DD /* UINavigationController+CJFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+CJFullscreenPopGesture.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,6 +126,8 @@
 				638007451F25F315004A8A12 /* AppDelegate.m */,
 				638007471F25F315004A8A12 /* ViewController.h */,
 				638007481F25F315004A8A12 /* ViewController.m */,
+				F48D420F209C029E00C064BC /* TestViewController.h */,
+				F48D4210209C029E00C064BC /* TestViewController.m */,
 				6380074A1F25F315004A8A12 /* Main.storyboard */,
 				6380074D1F25F315004A8A12 /* Assets.xcassets */,
 				6380074F1F25F315004A8A12 /* LaunchScreen.storyboard */,
@@ -330,6 +335,7 @@
 				F4BCE9462099809800C246DD /* UINavigationController+CJFullscreenPopGesture.m in Sources */,
 				638007461F25F315004A8A12 /* AppDelegate.m in Sources */,
 				638007431F25F315004A8A12 /* main.m in Sources */,
+				F48D4211209C029E00C064BC /* TestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
