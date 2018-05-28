@@ -308,6 +308,15 @@ typedef void (^_CJViewControllerWillAppearInjectBlock)(UIViewController *viewCon
     return shotView;
 }
 
+- (void)removeAllScreenShotViewInWindow {
+    [self.childVCImages removeAllObjects];
+    [APP_WINDOW.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([obj isMemberOfClass:[CJScreenShotView class]]) {
+            [obj removeFromSuperview];
+        }
+    }];
+}
+
 - (BOOL)cj_viewControllerBasedNavigationBarAppearanceEnabled {
     NSNumber *number = objc_getAssociatedObject(self, _cmd);
     if (number) {
@@ -408,6 +417,8 @@ typedef void (^_CJViewControllerWillAppearInjectBlock)(UIViewController *viewCon
     SEL key = @selector(cj_shouldReceiveTouchDistanceToLeftEdge);
     objc_setAssociatedObject(self, key, @(MAX(0, distance)), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
+
+
 
 
 

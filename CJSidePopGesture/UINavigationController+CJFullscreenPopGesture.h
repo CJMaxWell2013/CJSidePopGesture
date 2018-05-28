@@ -40,6 +40,12 @@ typedef NS_ENUM(NSInteger,CJFullscreenPopGestureStyle) {
 /** 侧滑返回手势手势触发距离，默认全屏 */
 @property (nonatomic, assign) CGFloat cj_shouldReceiveTouchDistanceToLeftEdge;
 
+/** 所有的压栈截图 */
+@property (nonatomic, strong) NSMutableArray<UIImage *> *childVCImages;
+
+/**当Window的rootViewController发生变化时候，需要调用改方法，将所有的侧滑蒙版去掉
+ */
+- (void)removeAllScreenShotViewInWindow;
 
 @end
 
